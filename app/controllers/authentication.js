@@ -33,15 +33,7 @@ exports.register = function(req, res, next){
 	var email = req.body.email;
 	var password = req.body.password;
 	var role = req.body.role;
-	var registrationcode = req.body.registrationcode;
 
-	if(!registrationcode){
-		return res.status(422).send({error: 'You must enter registration code '});
-	}
-
-	if(registrationcode != "5001"){
-		return res.status(422).send({error: 'Invalid registration code '});
-	}
 
 
 	if(!email){
