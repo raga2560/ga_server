@@ -69,7 +69,7 @@ exports.createComment = function(req, res ){
     var comment = req.body;
 
 
-    Post.update({_id, comment.postid}, {
+    Post.update({_id: comment.postid}, {
         $push : { comments : comment }
     }, function(err, post) {
 

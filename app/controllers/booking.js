@@ -40,7 +40,8 @@ function checkbooking(room, S, E, cb)
             else {
                 cb(null, bookings);
             }
-)
+
+});
 }
 
 exports.createBooking = function(req, res ){
