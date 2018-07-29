@@ -3,19 +3,27 @@ var bcrypt   = require('bcrypt-nodejs');
 
 var BookingSchema = new mongoose.Schema({
 
-	startdate: {
-		type: Date,
+	starttime: {
+		type: String,
 		required: true
 	},
-	enddate: {
-		type: Date,
+	endtime: {
+		type: String,
 		required: true
 	},
+	startminutes: {
+		type: Number,
+		required: true
+	},
+	endminutes: {
+		type: Number,
+		required: true
+        }, 
 	room: {
 		type: String,
 		required: true
 	},
-	date: {
+	bookingdate: {
 		type: String,
 		required: true
 	},
@@ -32,6 +40,7 @@ var BookingSchema = new mongoose.Schema({
 }, {
 	timestamps: true
 });
+
 
 
 module.exports = mongoose.model('Booking', BookingSchema);
